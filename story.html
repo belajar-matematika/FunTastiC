@@ -475,5 +475,35 @@
 
   <link rel="stylesheet" href="html5/data/css/output.min.css" data-noprefix/>
 </body>
+
+
+
+
+<audio id="bgSong" hidden controls>
+  <source src="musik1.mp3" type="audio/mpeg">
+  <source src="musik2.mp3" type="audio/mpeg">
+   </audio>
+
+<script>
+   var s = document.getElementById("bgSong");
+       s.loop = true;
+   </script>
+
+<script>
+  var audio = document.getElementById("bgSong");
+  audio.volume = 0.5;
+</script>
+
+<script>
+       var s = document.getElementById("bgSong");
+           s.onended = function(){
+           this.currentTime = 0 ;
+           this.play();
+        }
+       </script>
+
+
+
+
 <script src="html5/lib/scripts/bootstrapper.min.js"></script>
 </html>
